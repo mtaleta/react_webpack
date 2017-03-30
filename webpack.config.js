@@ -35,6 +35,9 @@ module.exports = {
                                     }
                                 ],
                                 'react'
+                            ],
+                            plugins: [
+                                'babel-plugin-transform-class-properties'
                             ]
                         }
                     }
@@ -49,7 +52,6 @@ module.exports = {
     devServer: {
         contentBase: distPath,
         compress: true,
-        port: 8080
-    },
-    devtool: 'cheap-source-map'
+        port: 7070
+    }
 };

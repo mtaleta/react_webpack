@@ -5,6 +5,10 @@ import Main from 'components/Main.jsx';
 
 window.onload = function() {
     ReactDOM.render(
-        <Main />,
-        document.getElementById('root'));
-    };
+        <div>
+            <Main />
+            <Main />
+        </div>,
+        document.getElementById('root')
+    );
+};
