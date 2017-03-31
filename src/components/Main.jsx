@@ -20,11 +20,7 @@ export default class Main extends React.Component {
     render() {
         return (
             <div className='main'>
-                <h1>Hello React</h1> {
-                    for (let i = 0; i < 5; i++) {
-                        <h3>For {i}</h3>
-                    }
-                }
+                <h1>Hello React</h1>
                 <Component count={this.state.count} onReset={this.handleReset}/>
             </div>
         );
