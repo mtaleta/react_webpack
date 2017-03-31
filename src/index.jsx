@@ -7,7 +7,6 @@ window.onload = function() {
     ReactDOM.render(
         <div>
             <Main />
-            <Main />
         </div>,
         document.getElementById('root')
     );
