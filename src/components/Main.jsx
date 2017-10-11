@@ -13,7 +13,7 @@ export default class Main extends React.Component {
             count: Main.initCount
         };
         this.countdownId = null;
-
+        //bind讓handleReset可以自由自在地被call
         this.handleReset = this.handleReset.bind(this);
     }
 
@@ -31,6 +31,7 @@ export default class Main extends React.Component {
             /*
              * State updates may be asynchronous, so if we are calculating new
              * state value based on the previous one, we should use the callback.
+             * prevState使用當下的count
              */
             this.setState((prevState, props) => ({
                 count: prevState.count - 1
@@ -55,7 +56,7 @@ export default class Main extends React.Component {
         clearInterval(this.countdownId);
         this.setState({
             count: Main.initCount
-        }, () => { // called back after the state has been set
+        }, () => { // called back after the state has been se,確認更新完後使用
             this.countdownId = setInterval(() => this.tick(), 1000)
         });
     }
